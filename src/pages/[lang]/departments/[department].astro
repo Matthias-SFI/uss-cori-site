@@ -51,11 +51,13 @@ const departmentContent = {
 
 type DepartmentSlug = keyof typeof departmentContent;
 
+const base = import.meta.env.BASE_URL;
+
 const departmentLogos: Record<DepartmentSlug, string> = {
-    engineering: "/public/images/departments/engineering.png",
-    science: "/public/images/departments/science.png",
-    operations: "/public/images/departments/operations.png",
-    medical: "/public/images/departments/medical.png",
+    engineering: `${base}images/departments/engineering.png`,
+    science: `${base}images/departments/science.png`,
+    operations: `${base}images/departments/operations.png`,
+    medical: `${base}images/departments/medical.png`,
 };
 
 export function getStaticPaths() {
@@ -116,7 +118,12 @@ const ui =
 ---
 
 <BaseLayout title={`${dept.title} | ${t.title}`} lang={t.locale}>
-    <Header currentLang={currentLang} languages={languages} t={t} />
+    <Header
+        currentLang={currentLang}
+        languages={languages}
+        t={t}
+        currentPath={Astro.url.pathname}
+    />
 
     <DepartmentPage
         currentLang={currentLang}

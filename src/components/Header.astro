@@ -15,31 +15,42 @@ interface Props {
   currentLang: string;
   languages: LanguageOption[];
   t: Translation;
+  currentPath?: string;
 }
 
-const { currentLang, languages, t } = Astro.props;
+const { currentLang, languages, t, currentPath = "" } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+
 const activeLanguage =
   languages.find((lang) => lang.code === currentLang) ?? languages[0];
+
+const pathWithoutBase = currentPath.startsWith(base)
+  ? currentPath.slice(base.length)
+  : currentPath.replace(/^\//, "");
+
+const restPath = pathWithoutBase.replace(/^(de|en|fr)\/?/, "");
+
+const makeLangHref = (code: string) =>
+  `${base}${code}/${restPath}`.replace(/([^:]\/)\/+/g, "$1");
+
+const homeHref = `${base}${currentLang}/`;
 ---
 
 <header class="topbar">
   <div class="container topbar-inner">
     <div class="brand">
-      <a
-        href={`/${currentLang}`}
-        class="brand-badge-link"
-        aria-label="USS Cori Home"
-      >
+      <a href={homeHref} class="brand-badge-link" aria-label="USS Cori Home">
         <div class="brand-badge">
           <img
-            src="/images/cori-logo.png"
+            src={`${base}images/cori-logo.png`}
             alt="USS Cori Logo"
             class="brand-logo"
           />
         </div>
       </a>
 
-      <a href={`/${currentLang}`} class="brand-home-link">USS CORI</a>
+      <a href={homeHref} class="brand-home-link">USS CORI</a>
     </div>
 
     <div class="nav-area">
@@ -59,7 +70,7 @@ const activeLanguage =
           {
             languages.map((lang) => (
               <a
-                href={`/${lang.code}`}
+                href={makeLangHref(lang.code)}
                 class={`lang-dropdown-item ${currentLang === lang.code ? "active" : ""}`}
               >
                 <span class="lang-flag">{lang.flag}</span>

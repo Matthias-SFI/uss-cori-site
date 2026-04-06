@@ -26,6 +26,8 @@ const {
     medicalTitle,
     medicalText,
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <section id="departments">
@@ -37,7 +39,7 @@ const {
     <div class="panels">
         <a
             class="panel panel-link"
-            href={`/${currentLang}/departments/engineering`}
+            href={`${base}${currentLang}/departments/engineering`}
         >
             <h3>{engineeringTitle}</h3>
             <p>{engineeringText}</p>
@@ -45,7 +47,7 @@ const {
 
         <a
             class="panel panel-link"
-            href={`/${currentLang}/departments/science`}
+            href={`${base}${currentLang}/departments/science`}
         >
             <h3>{scienceTitle}</h3>
             <p>{scienceText}</p>
@@ -53,7 +55,7 @@ const {
 
         <a
             class="panel panel-link"
-            href={`/${currentLang}/departments/operations`}
+            href={`${base}${currentLang}/departments/operations`}
         >
             <h3>{operationsTitle}</h3>
             <p>{operationsText}</p>
@@ -61,7 +63,7 @@ const {
 
         <a
             class="panel panel-link"
-            href={`/${currentLang}/departments/medical`}
+            href={`${base}${currentLang}/departments/medical`}
         >
             <h3>{medicalTitle}</h3>
             <p>{medicalText}</p>
