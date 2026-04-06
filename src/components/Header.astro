@@ -20,7 +20,8 @@ interface Props {
 
 const { currentLang, languages, t, currentPath = "" } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
 
 const activeLanguage =
   languages.find((lang) => lang.code === currentLang) ?? languages[0];

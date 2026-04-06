@@ -51,7 +51,8 @@ const departmentContent = {
 
 type DepartmentSlug = keyof typeof departmentContent;
 
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
 
 const departmentLogos: Record<DepartmentSlug, string> = {
     engineering: `${base}images/departments/engineering.png`,
