@@ -1,0 +1,56 @@
+{
+    "title": "Engineering",
+    "subtitle": "Diagnostics, Repair and Systems Control",
+    "intro": "Engineering keeps the Cori running when systems fail, power fluctuates, or technical problems suddenly become the main character of a mission. This is where analysis, repairs, improvisation, and the ability to stay clear-headed under pressure matter most.",
+    "roleTitle": "Role on Board",
+    "roleText": "Engineering ensures that the Cori remains operational and mission-ready. This includes system stability, power distribution, repairs, technical safety, and supporting other departments during scientific or tactical situations.",
+    "focusTitle": "Core Responsibilities",
+    "focusItems": [
+        "System diagnostics and troubleshooting",
+        "Repairs and maintenance",
+        "Power and ship systems",
+        "Technical support during missions"
+    ],
+    "workflowTitle": "Typical Operational Workflow",
+    "workflowSteps": [
+        "Detect a malfunction or irregularity",
+        "Analyze the cause and identify affected systems",
+        "Secure ship systems and set priorities",
+        "Carry out repairs or implement a workaround",
+        "Verify functionality and document the incident"
+    ],
+    "missionExamplesTitle": "Typical Areas of Operation",
+    "missionExamples": [
+        "Failure of critical ship systems",
+        "Recalibration of sensor or power distribution systems",
+        "Improvised solutions under time pressure",
+        "Technical analysis after incidents"
+    ],
+    "systemsTitle": "Core Systems On Board",
+    "systemsItems": [
+        "Warp core and power distribution",
+        "EPS network and emergency power routes",
+        "Sensors and long-range systems",
+        "Internal ship systems and maintenance access points"
+    ],
+    "coordinationTitle": "Coordination with Other Departments",
+    "coordinationItems": [
+        "Science for sensors, scans, and technical analysis",
+        "Ops and Command for power priorities and system authorization",
+        "Security during damage control situations and critical infrastructure failures",
+        "Medical for life support, environmental systems, and emergencies"
+    ],
+    "cultureTitle": "Department Culture",
+    "cultureText": "Engineering on the Cori means pragmatic thinking, clean logic, and staying calm in chaos. If you enjoy breaking problems apart, understanding systems, and dealing with technical mission work, this is where you belong.",
+    "projectsTitle": "Typical Technical Tasks",
+    "projectsItems": [
+        "Diagnostic protocols for recurring system faults",
+        "Technical mission reports and damage analysis",
+        "Improving internal maintenance and response procedures",
+        "Supporting scientific missions through technical evaluation"
+    ],
+    "newcomerTitle": "For New Crew Members",
+    "newcomerText": "No one is expected to know every system detail from day one. What matters is an interest in technology, logical thinking, and the ability to approach problems in a structured way.",
+    "noteTitle": "Engineering Principle",
+    "noteText": "Engineering on the Cori does not operate by the motto of hope and duct tape, even if both occasionally help. The goal is understandable, credible, and creative problem-solving with attention to systems, interdependencies, and consequences."
+}

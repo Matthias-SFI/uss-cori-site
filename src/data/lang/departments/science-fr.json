@@ -1,0 +1,21 @@
+{
+    "title": "Science",
+    "subtitle": "Recherche, analyse et découverte",
+    "intro": "Le département scientifique est le cœur de toute mission où la curiosité vaut davantage que la force brute. À bord du Cori, ce département étudie les anomalies, analyse les scans, développe des hypothèses et apporte de la structure à tout ce qui paraît d’abord inexplicable.",
+    "focusTitle": "Domaines principaux",
+    "focusItems": [
+        "Analyse des capteurs et évaluation des données",
+        "Recherche sur les anomalies et les phénomènes",
+        "Missions scientifiques et études de terrain",
+        "Interprétation de signaux et de contacts inconnus"
+    ],
+    "missionExamplesTitle": "Domaines d’intervention typiques",
+    "missionExamples": [
+        "Analyse de phénomènes spatiaux énigmatiques",
+        "Évaluation de scans scientifiques de longue portée",
+        "Étude de technologies étrangères ou de conditions environnementales",
+        "Développement d’hypothèses et de rapports de mission"
+    ],
+    "cultureTitle": "Culture du département",
+    "cultureText": "Le département scientifique du Cori repose sur la curiosité, la précision et le plaisir de prendre les questions vraiment au sérieux. Si tu aimes observer, relier les éléments, débattre et découvrir, tu trouveras ici ta place."
+}

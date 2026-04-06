@@ -1,0 +1,21 @@
+{
+    "title": "Science",
+    "subtitle": "Research, analysis, and discovery",
+    "intro": "Science is at the center of every mission where curiosity matters more than brute force. On the Cori, this department studies anomalies, evaluates scans, develops theories, and brings structure to anything that first appears unexplained.",
+    "focusTitle": "Focus Areas",
+    "focusItems": [
+        "Sensor analysis and data evaluation",
+        "Research into anomalies and unusual phenomena",
+        "Scientific missions and field studies",
+        "Interpretation of unknown signals and contacts"
+    ],
+    "missionExamplesTitle": "Typical Mission Areas",
+    "missionExamples": [
+        "Analysis of unusual spatial phenomena",
+        "Evaluation of long-range scientific scans",
+        "Investigation of alien technology or environmental conditions",
+        "Development of hypotheses and mission reports"
+    ],
+    "cultureTitle": "Department Culture",
+    "cultureText": "Science aboard the Cori is driven by curiosity, precision, and a genuine interest in asking better questions. Anyone who enjoys observing, connecting ideas, discussing theories, and making discoveries will fit in well here."
+}

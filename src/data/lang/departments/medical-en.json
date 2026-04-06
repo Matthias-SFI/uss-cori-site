@@ -1,0 +1,21 @@
+{
+    "title": "Medical",
+    "subtitle": "Care, stabilization, and crew support",
+    "intro": "Medical looks after the health and operational readiness of the crew whenever missions become risky, stressful, or unpredictable. On the Cori, it combines professional care with responsibility, composure, and attention to the human side of life aboard ship.",
+    "focusTitle": "Focus Areas",
+    "focusItems": [
+        "Medical care and first response",
+        "Stabilization after missions or incidents",
+        "Crew health monitoring",
+        "Support during physically or psychologically demanding missions"
+    ],
+    "missionExamplesTitle": "Typical Mission Areas",
+    "missionExamples": [
+        "Treating injured crew members",
+        "Medical assessment during away missions",
+        "Post-incident care after combat, accidents, or anomalies",
+        "Support during quarantine or high-stress situations"
+    ],
+    "cultureTitle": "Department Culture",
+    "cultureText": "Medical aboard the Cori is built on competence, care, and trust. Anyone who remains calm, takes responsibility, and remembers that every mission affects real people will belong here."
+}

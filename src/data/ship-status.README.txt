@@ -1,0 +1,167 @@
+USS CORI SHIP STATUS CONFIGURATION
+=================================
+
+This file explains how to edit the ship status shown on the website.
+
+Relevant file:
+src/data/ship-status.json
+
+Purpose
+-------
+The file ship-status.json controls the currently active status profile of the USS Cori.
+It also allows an optional custom location override in German and English.
+
+Only edit these fields
+----------------------
+1. activeProfile
+2. locationOverride.de
+3. locationOverride.en
+
+Do not rename keys
+------------------
+Do not rename:
+- activeProfile
+- locationOverride
+- de
+- en
+
+Do not add comments with // or /* ... */ inside the JSON file.
+JSON does not support comments and the site may break if the file becomes invalid.
+
+Valid profile values
+--------------------
+The following values are currently supported for activeProfile:
+
+- mission
+- drydock
+- standby
+- patrol
+- transit
+- orbit
+- systemcheck
+- diplomatic
+
+What each profile means
+-----------------------
+mission
+  The Cori is actively on a mission.
+
+drydock
+  The Cori is in drydock or docked for maintenance, fitting, or preparation.
+
+standby
+  The Cori is ready for deployment but not currently assigned to an active mission.
+
+patrol
+  The Cori is on patrol duty.
+
+transit
+  The Cori is traveling between destinations.
+
+orbit
+  The Cori is in orbit around a world, station, or mission target.
+
+systemcheck
+  The Cori is undergoing technical diagnostics, recalibration, or internal systems review.
+
+diplomatic
+  The Cori is assigned to a diplomatic mission or official meeting.
+
+How locationOverride works
+--------------------------
+The locationOverride field is optional.
+
+If both values are empty, the website uses the default location from the selected profile.
+
+Example:
+"locationOverride": {
+  "de": "",
+  "en": ""
+}
+
+If you enter custom text, that custom text replaces the default location shown on the website.
+
+Example:
+"locationOverride": {
+  "de": "Nahe der romulanischen Neutralen Zone",
+  "en": "Near the Romulan Neutral Zone"
+}
+
+Important:
+- de should contain German text
+- en should contain English text
+- If one language is left empty, that language will fall back to the profile default
+
+Recommended usage
+-----------------
+Use activeProfile for the general ship state.
+Use locationOverride only when you want to show a more specific current position.
+
+Good example:
+{
+  "activeProfile": "mission",
+  "locationOverride": {
+    "de": "Nahe Deep Space 9",
+    "en": "Near Deep Space 9"
+  }
+}
+
+Also good:
+{
+  "activeProfile": "drydock",
+  "locationOverride": {
+    "de": "",
+    "en": ""
+  }
+}
+
+Bad example
+-----------
+Do not write this:
+{
+  "activeProfile": "flying-around",
+  "locationOverride": {
+    "de": "",
+    "en": ""
+  }
+}
+
+Reason:
+"flying-around" is not a supported profile and will not work correctly.
+
+Editing rules
+-------------
+- Keep the JSON syntax valid
+- Use double quotes
+- Do not add trailing comments
+- Do not remove commas where required
+- Only use one activeProfile at a time
+
+Quick reference
+---------------
+Mission with custom location:
+{
+  "activeProfile": "mission",
+  "locationOverride": {
+    "de": "Nahe der romulanischen Neutralen Zone",
+    "en": "Near the Romulan Neutral Zone"
+  }
+}
+
+Docked with default location:
+{
+  "activeProfile": "drydock",
+  "locationOverride": {
+    "de": "",
+    "en": ""
+  }
+}
+
+Standby with default location:
+{
+  "activeProfile": "standby",
+  "locationOverride": {
+    "de": "",
+    "en": ""
+  }
+}

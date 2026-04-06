@@ -1,0 +1,56 @@
+{
+    "title": "Technik",
+    "subtitle": "Diagnose, Reparatur und Systemkontrolle",
+    "intro": "Die Technik hält die Cori am Laufen, wenn Systeme ausfallen, Energie schwankt oder technische Probleme plötzlich zur Hauptfigur einer Mission werden. Hier geht es um Analyse, Reparaturen, Improvisation und die Fähigkeit, auch unter Druck einen klaren Kopf zu behalten.",
+    "roleTitle": "Rolle an Bord",
+    "roleText": "Engineering sorgt dafür, dass die Cori einsatzbereit bleibt. Dazu gehören Systemstabilität, Energieverteilung, Reparaturen, technische Absicherung und die Unterstützung anderer Abteilungen bei wissenschaftlichen oder taktischen Lagen.",
+    "focusTitle": "Schwerpunkte",
+    "focusItems": [
+        "Systemdiagnose und Fehlersuche",
+        "Reparaturen und Wartung",
+        "Energie- und Schiffssysteme",
+        "Technische Unterstützung in Missionen"
+    ],
+    "workflowTitle": "Typischer Ablauf im Einsatz",
+    "workflowSteps": [
+        "Störung oder Abweichung erkennen",
+        "Ursache analysieren und betroffene Systeme eingrenzen",
+        "Schiffssysteme absichern und Prioritäten setzen",
+        "Reparatur oder Umgehungslösung umsetzen",
+        "Funktion prüfen und Vorfall dokumentieren"
+    ],
+    "missionExamplesTitle": "Typische Einsatzfelder",
+    "missionExamples": [
+        "Ausfall kritischer Schiffssysteme",
+        "Rekalibrierung von Sensor- oder Energieverteilern",
+        "Improvisierte Lösungen unter Zeitdruck",
+        "Technische Auswertung nach Zwischenfällen"
+    ],
+    "systemsTitle": "Kernsysteme an Bord",
+    "systemsItems": [
+        "Warpkern und Energieverteilung",
+        "EPS-Netz und Notstrompfade",
+        "Sensorik und Langstreckensysteme",
+        "Interne Schiffssysteme und Wartungszugänge"
+    ],
+    "coordinationTitle": "Zusammenarbeit mit anderen Abteilungen",
+    "coordinationItems": [
+        "Science bei Sensorik, Scans und technischer Auswertung",
+        "Ops und Command bei Energieprioritäten und Systemfreigaben",
+        "Security bei Schadenslagen und Ausfällen kritischer Infrastruktur",
+        "Medical bei Lebenserhaltung, Umweltkontrolle und Notfällen"
+    ],
+    "cultureTitle": "Abteilungskultur",
+    "cultureText": "Technik auf der Cori bedeutet pragmatisches Denken, saubere Logik und Ruhe im Chaos. Wer gern Probleme zerlegt, Systeme versteht und technische Missionen mag, ist hier genau richtig.",
+    "projectsTitle": "Typische technische Aufgaben",
+    "projectsItems": [
+        "Diagnoseprotokolle für wiederkehrende Systemfehler",
+        "Technische Missionsberichte und Schadensanalysen",
+        "Verbesserung interner Wartungs- und Reaktionsabläufe",
+        "Unterstützung wissenschaftlicher Missionen mit technischer Auswertung"
+    ],
+    "newcomerTitle": "Für neue Crewmitglieder",
+    "newcomerText": "Niemand muss zu Beginn jedes Systemdetail auswendig kennen. Wichtig sind Interesse an Technik, logisches Denken und die Bereitschaft, strukturiert auf Probleme zu reagieren.",
+    "noteTitle": "Technisches Leitbild",
+    "noteText": "Die Technik der Cori arbeitet nicht nach dem Motto Hoffnung plus Klebeband, auch wenn beides gelegentlich hilft. Ziel ist nachvollziehbare, glaubwürdige und kreative Problemlösung mit Blick auf Systeme, Zusammenhänge und Folgen."
+}

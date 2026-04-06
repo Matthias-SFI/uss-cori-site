@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USS Cori</title>
+    <meta http-equiv="refresh" content="0; url=/en" />
+    <script>
+      const browserLang = navigator.language?.toLowerCase() || "en";
+      const target = browserLang.startsWith("de")
+        ? "/de"
+        : browserLang.startsWith("fr")
+          ? "/fr"
+          : "/en";
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

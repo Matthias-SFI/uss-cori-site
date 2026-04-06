@@ -1,0 +1,39 @@
+---
+interface Props {
+    title: string;
+    text: string;
+    countriesTitle: string;
+    countriesIntro: string;
+    countries: string[];
+    summaryLabel: string;
+}
+
+const { title, text, countriesTitle, countriesIntro, countries, summaryLabel } =
+    Astro.props;
+---
+
+<section id="region9">
+    <div class="section-title">
+        <h2>{title}</h2>
+        <p>{text}</p>
+    </div>
+
+    <div class="region-card">
+        <div class="region-copy">
+            <h3>{countriesTitle}</h3>
+            <p>{countriesIntro}</p>
+        </div>
+
+        <details class="region-details">
+            <summary>{summaryLabel}</summary>
+
+            <div class="region-countries">
+                {
+                    countries.map((country) => (
+                        <span class="country-chip">{country}</span>
+                    ))
+                }
+            </div>
+        </details>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+---
+interface Translation {
+  navAbout: string;
+  navDepartments: string;
+  navJoin: string;
+}
+
+interface LanguageOption {
+  code: string;
+  flag: string;
+  label: string;
+}
+
+interface Props {
+  currentLang: string;
+  languages: LanguageOption[];
+  t: Translation;
+}
+
+const { currentLang, languages, t } = Astro.props;
+const activeLanguage =
+  languages.find((lang) => lang.code === currentLang) ?? languages[0];
+---
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <a
+        href={`/${currentLang}`}
+        class="brand-badge-link"
+        aria-label="USS Cori Home"
+      >
+        <div class="brand-badge">
+          <img
+            src="/images/cori-logo.png"
+            alt="USS Cori Logo"
+            class="brand-logo"
+          />
+        </div>
+      </a>
+
+      <a href={`/${currentLang}`} class="brand-home-link">USS CORI</a>
+    </div>
+
+    <div class="nav-area">
+      <nav class="nav">
+        <a href="#about">{t.navAbout}</a>
+        <a href="#departments">{t.navDepartments}</a>
+        <a href="#join">{t.navJoin}</a>
+      </nav>
+
+      <details class="lang-dropdown">
+        <summary class="lang-dropdown-trigger">
+          <span class="lang-flag">{activeLanguage.flag}</span>
+          <span class="lang-label">{activeLanguage.label}</span>
+        </summary>
+
+        <div class="lang-dropdown-menu">
+          {
+            languages.map((lang) => (
+              <a
+                href={`/${lang.code}`}
+                class={`lang-dropdown-item ${currentLang === lang.code ? "active" : ""}`}
+              >
+                <span class="lang-flag">{lang.flag}</span>
+                <span class="lang-label">{lang.label}</span>
+              </a>
+            ))
+          }
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

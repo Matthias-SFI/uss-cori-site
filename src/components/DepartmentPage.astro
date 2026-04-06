@@ -1,0 +1,143 @@
+---
+interface Props {
+    currentLang: string;
+    shipTitle: string;
+    departmentTitle: string;
+    subtitle: string;
+    intro: string;
+    focusTitle: string;
+    focusItems: string[];
+    missionExamplesTitle: string;
+    missionExamples: string[];
+    cultureTitle: string;
+    cultureText: string;
+    logoPath?: string;
+    homeLabel: string;
+    departmentsLabel: string;
+    backLabel: string;
+    logoFallbackLabel: string;
+    systemsTitle?: string;
+    systemsItems?: string[];
+    projectsTitle?: string;
+    projectsItems?: string[];
+    noteTitle?: string;
+    noteText?: string;
+}
+
+const {
+    currentLang,
+    shipTitle,
+    departmentTitle,
+    subtitle,
+    intro,
+    focusTitle,
+    focusItems,
+    missionExamplesTitle,
+    missionExamples,
+    cultureTitle,
+    cultureText,
+    logoPath = "",
+    homeLabel,
+    departmentsLabel,
+    backLabel,
+    logoFallbackLabel,
+    systemsTitle,
+    systemsItems = [],
+    projectsTitle,
+    projectsItems = [],
+    noteTitle,
+    noteText,
+} = Astro.props;
+---
+
+<main class="container department-page">
+    <div class="department-breadcrumbs">
+        <a href={`/${currentLang}`}>{homeLabel}</a>
+        <span>/</span>
+        <span>{departmentsLabel}</span>
+    </div>
+
+    <section class="department-hero">
+        <div class="department-hero-copy">
+            <a class="department-backlink" href={`/${currentLang}#departments`}
+                >{backLabel}</a
+            >
+            <p class="department-kicker">{shipTitle}</p>
+            <h1>{departmentTitle}</h1>
+            <p class="department-subtitle">{subtitle}</p>
+            <p class="department-intro">{intro}</p>
+        </div>
+
+        <div class="department-logo-card">
+            {
+                logoPath ? (
+                    <img
+                        src={logoPath}
+                        alt={departmentTitle}
+                        class="department-logo-image"
+                    />
+                ) : (
+                    <div class="department-logo-fallback">
+                        <span>{logoFallbackLabel}</span>
+                        <strong>{departmentTitle}</strong>
+                    </div>
+                )
+            }
+        </div>
+    </section>
+
+    <section class="department-content-grid">
+        <article class="department-card">
+            <h2>{focusTitle}</h2>
+            <ul class="department-list">
+                {focusItems.map((item) => <li>{item}</li>)}
+            </ul>
+        </article>
+
+        <article class="department-card">
+            <h2>{missionExamplesTitle}</h2>
+            <ul class="department-list">
+                {missionExamples.map((item) => <li>{item}</li>)}
+            </ul>
+        </article>
+    </section>
+
+    <section class="department-card department-culture-card">
+        <h2>{cultureTitle}</h2>
+        <p>{cultureText}</p>
+    </section>
+    {
+        systemsTitle && systemsItems.length > 0 && (
+            <section class="department-card department-culture-card">
+                <h2>{systemsTitle}</h2>
+                <ul class="department-list">
+                    {systemsItems.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            </section>
+        )
+    }
+
+    {
+        projectsTitle && projectsItems.length > 0 && (
+            <section class="department-card department-culture-card">
+                <h2>{projectsTitle}</h2>
+                <ul class="department-list">
+                    {projectsItems.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            </section>
+        )
+    }
+
+    {
+        noteTitle && noteText && (
+            <section class="department-card department-culture-card">
+                <h2>{noteTitle}</h2>
+                <p>{noteText}</p>
+            </section>
+        )
+    }
+</main>

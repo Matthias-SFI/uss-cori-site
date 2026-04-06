@@ -1,0 +1,21 @@
+{
+    "title": "Wissenschaft",
+    "subtitle": "Forschung, Analyse und Entdeckung",
+    "intro": "Die Wissenschaft ist das Herz jeder Mission, bei der Neugier mehr wert ist als rohe Kraft. Auf der Cori untersucht diese Abteilung Anomalien, wertet Scans aus, entwickelt Theorien und bringt Struktur in alles, was zunächst unerklärlich wirkt.",
+    "focusTitle": "Schwerpunkte",
+    "focusItems": [
+        "Sensoranalyse und Datenauswertung",
+        "Forschung zu Anomalien und Phänomenen",
+        "Wissenschaftliche Missionen und Feldstudien",
+        "Interpretation unbekannter Signale und Kontakte"
+    ],
+    "missionExamplesTitle": "Typische Einsatzfelder",
+    "missionExamples": [
+        "Analyse rätselhafter Raumphänomene",
+        "Auswertung wissenschaftlicher Langstreckenscans",
+        "Untersuchung fremder Technologien oder Umweltbedingungen",
+        "Entwicklung von Hypothesen und Missionsberichten"
+    ],
+    "cultureTitle": "Abteilungskultur",
+    "cultureText": "Wissenschaft auf der Cori lebt von Neugier, Präzision und der Freude daran, Fragen wirklich ernst zu nehmen. Wer gern beobachtet, kombiniert, diskutiert und entdeckt, findet hier den richtigen Platz."
+}

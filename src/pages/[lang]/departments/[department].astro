@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import DepartmentPage from "../../../components/DepartmentPage.astro";
+
+import en from "../../../data/lang/en.json";
+import de from "../../../data/lang/de.json";
+import fr from "../../../data/lang/fr.json";
+
+import engineeringEn from "../../../data/lang/departments/engineering-en.json";
+import engineeringDe from "../../../data/lang/departments/engineering-de.json";
+import engineeringFr from "../../../data/lang/departments/engineering-fr.json";
+import scienceEn from "../../../data/lang/departments/science-en.json";
+import scienceDe from "../../../data/lang/departments/science-de.json";
+import scienceFr from "../../../data/lang/departments/science-fr.json";
+import operationsEn from "../../../data/lang/departments/operations-en.json";
+import operationsDe from "../../../data/lang/departments/operations-de.json";
+import operationsFr from "../../../data/lang/departments/operations-fr.json";
+import medicalEn from "../../../data/lang/departments/medical-en.json";
+import medicalDe from "../../../data/lang/departments/medical-de.json";
+import medicalFr from "../../../data/lang/departments/medical-fr.json";
+
+const siteTranslations = { en, de, fr } as const;
+type Lang = keyof typeof siteTranslations;
+
+interface DepartmentContent {
+    title: string;
+    subtitle: string;
+    intro: string;
+    focusTitle: string;
+    focusItems: string[];
+    missionExamplesTitle: string;
+    missionExamples: string[];
+    cultureTitle: string;
+    cultureText: string;
+    systemsTitle?: string;
+    systemsItems?: string[];
+    projectsTitle?: string;
+    projectsItems?: string[];
+    noteTitle?: string;
+    noteText?: string;
+}
+
+const departmentContent = {
+    engineering: { en: engineeringEn, de: engineeringDe, fr: engineeringFr },
+    science: { en: scienceEn, de: scienceDe, fr: scienceFr },
+    operations: { en: operationsEn, de: operationsDe, fr: operationsFr },
+    medical: { en: medicalEn, de: medicalDe, fr: medicalFr },
+} as const;
+
+type DepartmentSlug = keyof typeof departmentContent;
+
+const departmentLogos: Record<DepartmentSlug, string> = {
+    engineering: "/public/images/departments/engineering.png",
+    science: "/public/images/departments/science.png",
+    operations: "/public/images/departments/operations.png",
+    medical: "/public/images/departments/medical.png",
+};
+
+export function getStaticPaths() {
+    const langs = ["en", "de", "fr"];
+    const departments = ["engineering", "science", "operations", "medical"];
+
+    return langs.flatMap((lang) =>
+        departments.map((department) => ({
+            params: { lang, department },
+        })),
+    );
+}
+
+const rawLang = Astro.params.lang;
+const currentLang: Lang =
+    rawLang === "de" ? "de" : rawLang === "fr" ? "fr" : "en";
+
+const rawDepartment = Astro.params.department;
+const currentDepartment: DepartmentSlug =
+    rawDepartment === "science" ||
+    rawDepartment === "operations" ||
+    rawDepartment === "medical"
+        ? rawDepartment
+        : "engineering";
+
+const t = siteTranslations[currentLang];
+const dept = departmentContent[currentDepartment][
+    currentLang
+] as DepartmentContent;
+
+const languages: { code: Lang; flag: string; label: string }[] = [
+    { code: "en", flag: "🇬🇧", label: "English" },
+    { code: "de", flag: "🇩🇪", label: "Deutsch" },
+    { code: "fr", flag: "🇫🇷", label: "Français" },
+];
+
+const ui =
+    currentLang === "de"
+        ? {
+              homeLabel: "Startseite",
+              departmentsLabel: "Abteilungen",
+              backLabel: "Zurück zu den Abteilungen",
+              logoFallbackLabel: "Logo folgt",
+          }
+        : currentLang === "fr"
+          ? {
+                homeLabel: "Accueil",
+                departmentsLabel: "Départements",
+                backLabel: "Retour aux départements",
+                logoFallbackLabel: "Logo à venir",
+            }
+          : {
+                homeLabel: "Home",
+                departmentsLabel: "Departments",
+                backLabel: "Back to departments",
+                logoFallbackLabel: "Logo coming soon",
+            };
+---
+
+<BaseLayout title={`${dept.title} | ${t.title}`} lang={t.locale}>
+    <Header currentLang={currentLang} languages={languages} t={t} />
+
+    <DepartmentPage
+        currentLang={currentLang}
+        shipTitle={t.title}
+        departmentTitle={dept.title}
+        subtitle={dept.subtitle}
+        intro={dept.intro}
+        focusTitle={dept.focusTitle}
+        focusItems={dept.focusItems}
+        missionExamplesTitle={dept.missionExamplesTitle}
+        missionExamples={dept.missionExamples}
+        cultureTitle={dept.cultureTitle}
+        cultureText={dept.cultureText}
+        logoPath={departmentLogos[currentDepartment]}
+        homeLabel={ui.homeLabel}
+        departmentsLabel={ui.departmentsLabel}
+        backLabel={ui.backLabel}
+        logoFallbackLabel={ui.logoFallbackLabel}
+        systemsTitle={dept.systemsTitle}
+        systemsItems={dept.systemsItems}
+        projectsTitle={dept.projectsTitle}
+        projectsItems={dept.projectsItems}
+        noteTitle={dept.noteTitle}
+        noteText={dept.noteText}
+    />
+
+    <Footer footerText={t.footerText} />
+</BaseLayout>

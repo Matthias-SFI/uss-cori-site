@@ -1,0 +1,70 @@
+---
+interface Props {
+    currentLang: string;
+    title: string;
+    text: string;
+    engineeringTitle: string;
+    engineeringText: string;
+    scienceTitle: string;
+    scienceText: string;
+    operationsTitle: string;
+    operationsText: string;
+    medicalTitle: string;
+    medicalText: string;
+}
+
+const {
+    currentLang,
+    title,
+    text,
+    engineeringTitle,
+    engineeringText,
+    scienceTitle,
+    scienceText,
+    operationsTitle,
+    operationsText,
+    medicalTitle,
+    medicalText,
+} = Astro.props;
+---
+
+<section id="departments">
+    <div class="section-title">
+        <h2>{title}</h2>
+        <p>{text}</p>
+    </div>
+
+    <div class="panels">
+        <a
+            class="panel panel-link"
+            href={`/${currentLang}/departments/engineering`}
+        >
+            <h3>{engineeringTitle}</h3>
+            <p>{engineeringText}</p>
+        </a>
+
+        <a
+            class="panel panel-link"
+            href={`/${currentLang}/departments/science`}
+        >
+            <h3>{scienceTitle}</h3>
+            <p>{scienceText}</p>
+        </a>
+
+        <a
+            class="panel panel-link"
+            href={`/${currentLang}/departments/operations`}
+        >
+            <h3>{operationsTitle}</h3>
+            <p>{operationsText}</p>
+        </a>
+
+        <a
+            class="panel panel-link"
+            href={`/${currentLang}/departments/medical`}
+        >
+            <h3>{medicalTitle}</h3>
+            <p>{medicalText}</p>
+        </a>
+    </div>
+</section>

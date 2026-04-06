@@ -1,0 +1,49 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  heroText: string;
+  joinLabel: string;
+  briefingLabel: string;
+}
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  heroText,
+  joinLabel,
+  briefingLabel
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">{eyebrow}</span>
+      <h1>{title}</h1>
+      <p>
+        {subtitle}. {heroText}
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="#join">{joinLabel}</a>
+        <a class="btn btn-secondary" href="#about">{briefingLabel}</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="ship ship-viewer">
+            <iframe
+            title="Lamarr-Class 3D Viewer"
+            src="https://sketchfab.com/models/8c9bf35d3cde4beeb07fb155cccda24c/embed"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </div>
+  </div>
+</section>

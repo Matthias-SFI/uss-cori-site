@@ -1,0 +1,56 @@
+{
+    "title": "Ingénierie",
+    "subtitle": "Diagnostic, réparation et contrôle des systèmes",
+    "intro": "L’ingénierie maintient le Cori en fonctionnement lorsque des systèmes tombent en panne, que l’énergie fluctue ou que des problèmes techniques deviennent soudainement les véritables vedettes d’une mission. Il est ici question d’analyse, de réparations, d’improvisation et de la capacité à garder la tête froide même sous pression.",
+    "roleTitle": "Rôle à bord",
+    "roleText": "L’ingénierie veille à ce que le Cori reste opérationnel. Cela comprend la stabilité des systèmes, la distribution d’énergie, les réparations, la sécurisation technique ainsi que le soutien aux autres départements lors de situations scientifiques ou tactiques.",
+    "focusTitle": "Domaines principaux",
+    "focusItems": [
+        "Diagnostic des systèmes et recherche de pannes",
+        "Réparations et maintenance",
+        "Systèmes énergétiques et systèmes du vaisseau",
+        "Soutien technique pendant les missions"
+    ],
+    "workflowTitle": "Déroulement typique en intervention",
+    "workflowSteps": [
+        "Détecter une panne ou une anomalie",
+        "Analyser la cause et identifier les systèmes concernés",
+        "Sécuriser les systèmes du vaisseau et définir les priorités",
+        "Effectuer la réparation ou mettre en place une solution de contournement",
+        "Vérifier le bon fonctionnement et documenter l’incident"
+    ],
+    "missionExamplesTitle": "Domaines d’intervention typiques",
+    "missionExamples": [
+        "Panne de systèmes critiques du vaisseau",
+        "Recalibrage des capteurs ou des répartiteurs d’énergie",
+        "Solutions improvisées sous contrainte de temps",
+        "Analyse technique après des incidents"
+    ],
+    "systemsTitle": "Systèmes principaux à bord",
+    "systemsItems": [
+        "Cœur de distorsion et distribution d’énergie",
+        "Réseau EPS et circuits d’alimentation de secours",
+        "Capteurs et systèmes de longue portée",
+        "Systèmes internes du vaisseau et accès de maintenance"
+    ],
+    "coordinationTitle": "Coopération avec les autres départements",
+    "coordinationItems": [
+        "Science pour les capteurs, les scans et l’analyse technique",
+        "Ops et Command pour les priorités énergétiques et les autorisations système",
+        "Security en cas d’avaries et de défaillances d’infrastructures critiques",
+        "Medical pour le maintien en vie, le contrôle environnemental et les urgences"
+    ],
+    "cultureTitle": "Culture du département",
+    "cultureText": "L’ingénierie sur le Cori repose sur une pensée pragmatique, une logique rigoureuse et le calme dans le chaos. Si tu aimes démonter les problèmes, comprendre les systèmes et participer à des missions techniques, tu es au bon endroit.",
+    "projectsTitle": "Tâches techniques typiques",
+    "projectsItems": [
+        "Protocoles de diagnostic pour les défaillances récurrentes des systèmes",
+        "Rapports techniques de mission et analyses de dommages",
+        "Amélioration des procédures internes de maintenance et de réaction",
+        "Soutien aux missions scientifiques par une évaluation technique"
+    ],
+    "newcomerTitle": "Pour les nouveaux membres d’équipage",
+    "newcomerText": "Personne n’a besoin de connaître chaque détail technique par cœur dès le début. Ce qui compte, c’est l’intérêt pour la technologie, la pensée logique et la volonté de réagir aux problèmes de manière structurée.",
+    "noteTitle": "Principe technique",
+    "noteText": "L’ingénierie du Cori ne fonctionne pas selon la devise espoir plus ruban adhésif, même si les deux aident parfois. L’objectif est une résolution de problèmes compréhensible, crédible et créative, avec une attention portée aux systèmes, aux interactions et aux conséquences."
+}

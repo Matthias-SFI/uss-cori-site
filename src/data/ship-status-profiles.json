@@ -1,0 +1,186 @@
+{
+    "mission": {
+        "de": {
+            "hull": "98%",
+            "warp": "Stabil",
+            "sensors": "Sweep läuft",
+            "ship": "Auf Mission",
+            "location": "Im Einsatzgebiet"
+        },
+        "en": {
+            "hull": "98%",
+            "warp": "Stable",
+            "sensors": "Sweep active",
+            "ship": "On mission",
+            "location": "In the mission area"
+        },
+        "fr": {
+            "hull": "98%",
+            "warp": "Stable",
+            "sensors": "Balayage actif",
+            "ship": "En mission",
+            "location": "Dans la zone de mission"
+        }
+    },
+    "drydock": {
+        "de": {
+            "hull": "100%",
+            "warp": "Im Standby",
+            "sensors": "Kalibrierung aktiv",
+            "ship": "Im Raumdock",
+            "location": "Raumdock 9"
+        },
+        "en": {
+            "hull": "100%",
+            "warp": "On standby",
+            "sensors": "Calibration active",
+            "ship": "In drydock",
+            "location": "Spacedock 9"
+        },
+        "fr": {
+            "hull": "100%",
+            "warp": "En veille",
+            "sensors": "Calibration active",
+            "ship": "Au dock spatial",
+            "location": "Dock spatial 9"
+        }
+    },
+    "standby": {
+        "de": {
+            "hull": "100%",
+            "warp": "Ausgeglichen",
+            "sensors": "Online",
+            "ship": "In Bereitschaft",
+            "location": "Heimsektor"
+        },
+        "en": {
+            "hull": "100%",
+            "warp": "Balanced",
+            "sensors": "Online",
+            "ship": "On standby",
+            "location": "Home sector"
+        },
+        "fr": {
+            "hull": "100%",
+            "warp": "Équilibré",
+            "sensors": "En ligne",
+            "ship": "En attente",
+            "location": "Secteur d'attache"
+        }
+    },
+    "patrol": {
+        "de": {
+            "hull": "99%",
+            "warp": "Nominal",
+            "sensors": "Passivüberwachung",
+            "ship": "Patrouille",
+            "location": "Grenzsektor"
+        },
+        "en": {
+            "hull": "99%",
+            "warp": "Nominal",
+            "sensors": "Passive monitoring",
+            "ship": "On patrol",
+            "location": "Border sector"
+        },
+        "fr": {
+            "hull": "99%",
+            "warp": "Nominal",
+            "sensors": "Surveillance passive",
+            "ship": "En patrouille",
+            "location": "Secteur frontalier"
+        }
+    },
+    "transit": {
+        "de": {
+            "hull": "99%",
+            "warp": "Lastwechsel aktiv",
+            "sensors": "Langstreckenscan aktiv",
+            "ship": "Langstreckenreise",
+            "location": "Transitraum"
+        },
+        "en": {
+            "hull": "99%",
+            "warp": "Load shift active",
+            "sensors": "Long-range scan active",
+            "ship": "Long-range transit",
+            "location": "Transit corridor"
+        },
+        "fr": {
+            "hull": "99%",
+            "warp": "Transfert de charge actif",
+            "sensors": "Scan longue portée actif",
+            "ship": "Transit longue distance",
+            "location": "Couloir de transit"
+        }
+    },
+    "orbit": {
+        "de": {
+            "hull": "100%",
+            "warp": "Im Leerlauf",
+            "sensors": "Nahbereichsfokus",
+            "ship": "Im Orbit",
+            "location": "Orbit über Zielwelt"
+        },
+        "en": {
+            "hull": "100%",
+            "warp": "At idle",
+            "sensors": "Short-range focus",
+            "ship": "In orbit",
+            "location": "Orbit above target world"
+        },
+        "fr": {
+            "hull": "100%",
+            "warp": "Au ralenti",
+            "sensors": "Focus courte portée",
+            "ship": "En orbite",
+            "location": "En orbite au-dessus du monde cible"
+        }
+    },
+    "systemcheck": {
+        "de": {
+            "hull": "100%",
+            "warp": "Diagnose aktiv",
+            "sensors": "Rekalibrierung läuft",
+            "ship": "Systemprüfung",
+            "location": "Technisches Prüfgebiet"
+        },
+        "en": {
+            "hull": "100%",
+            "warp": "Diagnostics active",
+            "sensors": "Recalibration in progress",
+            "ship": "System check",
+            "location": "Technical test zone"
+        },
+        "fr": {
+            "hull": "100%",
+            "warp": "Diagnostic actif",
+            "sensors": "Recalibrage en cours",
+            "ship": "Vérification des systèmes",
+            "location": "Zone d'essais techniques"
+        }
+    },
+    "diplomatic": {
+        "de": {
+            "hull": "100%",
+            "warp": "Stabil",
+            "sensors": "Diplomatisches Monitoring",
+            "ship": "Diplomatische Mission",
+            "location": "Treffpunkt mit Delegation"
+        },
+        "en": {
+            "hull": "100%",
+            "warp": "Stable",
+            "sensors": "Diplomatic monitoring",
+            "ship": "Diplomatic mission",
+            "location": "Delegation rendezvous"
+        },
+        "fr": {
+            "hull": "100%",
+            "warp": "Stable",
+            "sensors": "Surveillance diplomatique",
+            "ship": "Mission diplomatique",
+            "location": "Point de rendez-vous avec la délégation"
+        }
+    }
+}

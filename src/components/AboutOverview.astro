@@ -1,0 +1,54 @@
+---
+import StatsGrid from "./StatsGrid.astro";
+import TranslationNote from "./TranslationNote.astro";
+
+interface Props {
+    overviewTitle: string;
+    overviewText: string;
+    statsRegistry: string;
+    statsRegistryValue: string;
+    statsClass: string;
+    statsClassValue: string;
+    statsFormat: string;
+    statsFormatValue: string;
+    statsFocus: string;
+    statsFocusValue: string;
+    translationTitle: string;
+    translationText: string;
+}
+
+const {
+    overviewTitle,
+    overviewText,
+    statsRegistry,
+    statsRegistryValue,
+    statsClass,
+    statsClassValue,
+    statsFormat,
+    statsFormatValue,
+    statsFocus,
+    statsFocusValue,
+    translationTitle,
+    translationText,
+} = Astro.props;
+---
+
+<section id="about">
+    <div class="section-title">
+        <h2>{overviewTitle}</h2>
+        <p>{overviewText}</p>
+    </div>
+
+    <StatsGrid
+        statsRegistry={statsRegistry}
+        statsRegistryValue={statsRegistryValue}
+        statsClass={statsClass}
+        statsClassValue={statsClassValue}
+        statsFormat={statsFormat}
+        statsFormatValue={statsFormatValue}
+        statsFocus={statsFocus}
+        statsFocusValue={statsFocusValue}
+    />
+
+    <TranslationNote title={translationTitle} text={translationText} />
+</section>

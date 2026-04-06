@@ -1,0 +1,45 @@
+---
+interface Props {
+  statsRegistry: string;
+  statsRegistryValue: string;
+  statsClass: string;
+  statsClassValue: string;
+  statsFormat: string;
+  statsFormatValue: string;
+  statsFocus: string;
+  statsFocusValue: string;
+}
+
+const {
+  statsRegistry,
+  statsRegistryValue,
+  statsClass,
+  statsClassValue,
+  statsFormat,
+  statsFormatValue,
+  statsFocus,
+  statsFocusValue
+} = Astro.props;
+---
+
+<div class="stats">
+  <article class="stat">
+    <small>{statsRegistry}</small>
+    <strong>{statsRegistryValue}</strong>
+  </article>
+
+  <article class="stat">
+    <small>{statsClass}</small>
+    <strong>{statsClassValue}</strong>
+  </article>
+
+  <article class="stat">
+    <small>{statsFormat}</small>
+    <strong>{statsFormatValue}</strong>
+  </article>
+
+  <article class="stat">
+    <small>{statsFocus}</small>
+    <strong>{statsFocusValue}</strong>
+  </article>
+</div>

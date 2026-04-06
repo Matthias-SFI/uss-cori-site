@@ -1,0 +1,109 @@
+---
+import en from "../data/lang/en.json";
+import de from "../data/lang/de.json";
+import fr from "../data/lang/fr.json";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import AboutOverview from "../components/AboutOverview.astro";
+import Departments from "../components/Departments.astro";
+import ReadyRoom from "../components/ReadyRoom.astro";
+import RegionNine from "../components/RegionNine.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "de" } },
+    { params: { lang: "fr" } },
+  ];
+}
+
+const translations = { en, de, fr } as const;
+type Lang = keyof typeof translations;
+
+const rawLang = Astro.params.lang;
+const currentLang: Lang =
+  rawLang === "de" ? "de" : rawLang === "fr" ? "fr" : "en";
+
+const t = translations[currentLang];
+
+const languages: { code: Lang; flag: string; label: string }[] = [
+  { code: "en", flag: "🇬🇧", label: "English" },
+  { code: "de", flag: "🇩🇪", label: "Deutsch" },
+  { code: "fr", flag: "🇫🇷", label: "Français" },
+];
+---
+
+<BaseLayout title={`${t.title} | ${t.languageName}`} lang={t.locale}>
+  <Header currentLang={currentLang} languages={languages} t={t} />
+
+  <main class="container">
+    <Hero
+      eyebrow={t.eyebrow}
+      title={t.title}
+      subtitle={t.subtitle}
+      heroText={t.heroText}
+      joinLabel={t.joinLabel}
+      briefingLabel={t.briefingLabel}
+    />
+
+    <AboutOverview
+      overviewTitle={t.overviewTitle}
+      overviewText={t.overviewText}
+      statsRegistry={t.statsRegistry}
+      statsRegistryValue={t.statsRegistryValue}
+      statsClass={t.statsClass}
+      statsClassValue={t.statsClassValue}
+      statsFormat={t.statsFormat}
+      statsFormatValue={t.statsFormatValue}
+      statsFocus={t.statsFocus}
+      statsFocusValue={t.statsFocusValue}
+      translationTitle={t.translationTitle}
+      translationText={t.translationText}
+    />
+
+    <RegionNine
+      title={t.regionTitle}
+      text={t.regionText}
+      countriesTitle={t.regionCountriesTitle}
+      countriesIntro={t.regionCountriesIntro}
+      countries={t.regionCountries}
+      summaryLabel={t.regionSummaryLabel}
+    />
+
+    <Departments
+      currentLang={currentLang}
+      title={t.departmentsTitle}
+      text={t.departmentsText}
+      engineeringTitle={t.engineeringTitle}
+      engineeringText={t.engineeringText}
+      scienceTitle={t.scienceTitle}
+      scienceText={t.scienceText}
+      operationsTitle={t.operationsTitle}
+      operationsText={t.operationsText}
+      medicalTitle={t.medicalTitle}
+      medicalText={t.medicalText}
+    />
+
+    <ReadyRoom
+      currentLang={currentLang}
+      title={t.readyRoomTitle}
+      text={t.readyRoomText}
+      applyNow={t.applyNow}
+      crewManifest={t.crewManifest}
+      statusHull={t.statusHull}
+      statusHullValue={t.statusHullValue}
+      statusWarp={t.statusWarp}
+      statusWarpValue={t.statusWarpValue}
+      statusSensors={t.statusSensors}
+      statusSensorsValue={t.statusSensorsValue}
+      statusComms={t.statusComms}
+      statusCommsValue={t.statusCommsValue}
+      statusLocation={t.statusLocation}
+    />
+  </main>
+
+  <Footer footerText={t.footerText} />
+</BaseLayout>

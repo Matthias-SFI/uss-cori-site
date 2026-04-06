@@ -1,0 +1,21 @@
+{
+    "title": "Medizin",
+    "subtitle": "Versorgung, Stabilisierung und Fürsorge",
+    "intro": "Die Medizin kümmert sich um die Gesundheit und Einsatzfähigkeit der Crew, wenn Missionen riskant, belastend oder unvorhersehbar werden. Auf der Cori verbindet sie fachliche Versorgung mit Verantwortung, Ruhe und einem Blick für die menschliche Seite an Bord.",
+    "focusTitle": "Schwerpunkte",
+    "focusItems": [
+        "Medizinische Versorgung und Erstbehandlung",
+        "Stabilisierung nach Einsätzen oder Zwischenfällen",
+        "Gesundheitsüberwachung der Crew",
+        "Begleitung psychisch oder körperlich belastender Missionen"
+    ],
+    "missionExamplesTitle": "Typische Einsatzfelder",
+    "missionExamples": [
+        "Behandlung verletzter Crewmitglieder",
+        "Medizinische Einschätzung bei Außeneinsätzen",
+        "Versorgung nach Gefechten, Unfällen oder Anomalien",
+        "Unterstützung bei Quarantäne- oder Belastungssituationen"
+    ],
+    "cultureTitle": "Abteilungskultur",
+    "cultureText": "Medizin auf der Cori bedeutet Kompetenz, Sorgfalt und Vertrauen. Wer ruhig bleibt, Verantwortung übernimmt und nicht vergisst, dass hinter jeder Mission Menschen stehen, ist hier genau richtig."
+}

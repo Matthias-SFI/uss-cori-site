@@ -1,0 +1,184 @@
+---
+import shipStatus from "../data/ship-status.json";
+import shipStatusProfiles from "../data/ship-status-profiles.json";
+
+interface Props {
+    currentLang: string;
+    title: string;
+    text: string;
+    applyNow: string;
+    crewManifest: string;
+    statusHull: string;
+    statusHullValue: string;
+    statusWarp: string;
+    statusWarpValue: string;
+    statusSensors: string;
+    statusSensorsValue: string;
+    statusComms: string;
+    statusCommsValue: string;
+    statusLocation: string;
+}
+
+const {
+    currentLang,
+    title,
+    text,
+    applyNow,
+    crewManifest,
+    statusHull,
+    statusWarp,
+    statusSensors,
+    statusComms,
+    statusLocation,
+} = Astro.props;
+
+type Lang = "de" | "en" | "fr";
+
+const lang: Lang = ["de", "en", "fr"].includes(currentLang)
+    ? (currentLang as Lang)
+    : "en";
+
+type ProfileValue = {
+    hull: string;
+    warp: string;
+    sensors: string;
+    ship: string;
+    location: string;
+};
+
+type ProfileSet = Record<
+    string,
+    { de: ProfileValue; en: ProfileValue; fr: ProfileValue }
+>;
+
+const profiles = shipStatusProfiles as ProfileSet;
+const activeKey =
+    shipStatus.activeProfile in profiles ? shipStatus.activeProfile : "mission";
+const activeProfile = profiles[activeKey][lang];
+const profileClass = `status-profile-${activeKey}`;
+
+const overrideLocation =
+    shipStatus.locationOverride &&
+    typeof shipStatus.locationOverride === "object" &&
+    shipStatus.locationOverride[lang] &&
+    shipStatus.locationOverride[lang].trim() !== ""
+        ? shipStatus.locationOverride[lang].trim()
+        : activeProfile.location;
+---
+
+<section id="join">
+    <div class="cta">
+        <div>
+            <div class="section-title">
+                <h2>{title}</h2>
+                <p>{text}</p>
+            </div>
+
+            <div class="actions">
+                <a class="btn btn-primary" href="#">{applyNow}</a>
+                <a class="btn btn-secondary" href="#">{crewManifest}</a>
+            </div>
+        </div>
+
+        <div class={`status-box status-box-profile ${profileClass}`}>
+            <div class="status-location-row">
+                <span class="status-location-label">{statusLocation}</span>
+                <span class="status-location-value">{overrideLocation}</span>
+            </div>
+
+            <div>
+                <span>{statusComms}</span>
+                <span class="status-ship-value">{activeProfile.ship}</span>
+            </div>
+            <div>
+                <span>{statusHull}</span>
+                <span>{activeProfile.hull}</span>
+            </div>
+            <div>
+                <span>{statusWarp}</span>
+                <span>{activeProfile.warp}</span>
+            </div>
+            <div>
+                <span>{statusSensors}</span>
+                <span>{activeProfile.sensors}</span>
+            </div>
+        </div>
+        <style>
+            .status-box-profile {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .status-location-row {
+                margin-bottom: 1rem;
+                padding: 0.85rem 1rem;
+                border-radius: 14px;
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+            }
+
+            .status-location-label {
+                display: block;
+                margin-bottom: 0.35rem;
+                font-size: 0.82rem;
+                letter-spacing: 0.03em;
+                color: var(--muted);
+                font-weight: 600;
+            }
+
+            .status-location-value {
+                display: block;
+                font-size: 1.12rem;
+                font-weight: 800;
+                color: var(--text);
+                line-height: 1.35;
+            }
+
+            .status-ship-value {
+                font-weight: 800;
+            }
+
+            .status-box-profile.status-profile-drydock .status-location-value,
+            .status-box-profile.status-profile-drydock .status-ship-value {
+                color: #7dffb0;
+            }
+
+            .status-box-profile.status-profile-mission .status-location-value,
+            .status-box-profile.status-profile-mission .status-ship-value {
+                color: #ff8e8e;
+            }
+
+            .status-box-profile.status-profile-standby .status-location-value,
+            .status-box-profile.status-profile-standby .status-ship-value {
+                color: #8cffb4;
+            }
+
+            .status-box-profile.status-profile-patrol .status-location-value,
+            .status-box-profile.status-profile-patrol .status-ship-value {
+                color: #ffd36e;
+            }
+
+            .status-box-profile.status-profile-transit .status-location-value,
+            .status-box-profile.status-profile-transit .status-ship-value {
+                color: #ffd36e;
+            }
+
+            .status-box-profile.status-profile-orbit .status-location-value,
+            .status-box-profile.status-profile-orbit .status-ship-value {
+                color: #8cffb4;
+            }
+
+            .status-box-profile.status-profile-systemcheck
+                .status-location-value,
+            .status-box-profile.status-profile-systemcheck .status-ship-value {
+                color: #7ed8ff;
+            }
+
+            .status-box-profile.status-profile-diplomatic
+                .status-location-value,
+            .status-box-profile.status-profile-diplomatic .status-ship-value {
+                color: #c7a0ff;
+            }
+        </style>
+    </div>
+</section>

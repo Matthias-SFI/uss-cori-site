@@ -1,0 +1,21 @@
+{
+    "title": "Médecine",
+    "subtitle": "Soins, stabilisation et prise en charge",
+    "intro": "Le département médical veille à la santé et à l’aptitude opérationnelle de l’équipage lorsque les missions deviennent risquées, éprouvantes ou imprévisibles. À bord du Cori, il associe compétence médicale, sens des responsabilités, calme et attention à la dimension humaine de la vie à bord.",
+    "focusTitle": "Domaines principaux",
+    "focusItems": [
+        "Soins médicaux et premiers traitements",
+        "Stabilisation après les missions ou les incidents",
+        "Surveillance de la santé de l’équipage",
+        "Accompagnement lors de missions psychologiquement ou physiquement éprouvantes"
+    ],
+    "missionExamplesTitle": "Domaines d’intervention typiques",
+    "missionExamples": [
+        "Traitement des membres d’équipage blessés",
+        "Évaluation médicale lors des missions à l’extérieur",
+        "Prise en charge après des combats, des accidents ou des anomalies",
+        "Soutien en situation de quarantaine ou de forte contrainte"
+    ],
+    "cultureTitle": "Culture du département",
+    "cultureText": "Le service médical du Cori repose sur la compétence, la rigueur et la confiance. Si tu sais rester calme, assumer des responsabilités et ne pas oublier qu’il y a des êtres humains derrière chaque mission, alors tu es à la bonne place."
+}
