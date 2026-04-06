@@ -48,19 +48,24 @@ const {
     noteTitle,
     noteText,
 } = Astro.props;
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
+
+const homeHref = `${base}${currentLang}/`;
+const departmentsHref = `${base}${currentLang}/#departments`;
 ---
 
 <main class="container department-page">
     <div class="department-breadcrumbs">
-        <a href={`/${currentLang}`}>{homeLabel}</a>
+        <a href={homeHref}>{homeLabel}</a>
         <span>/</span>
         <span>{departmentsLabel}</span>
     </div>
 
     <section class="department-hero">
         <div class="department-hero-copy">
-            <a class="department-backlink" href={`/${currentLang}#departments`}
-                >{backLabel}</a
+            <a class="department-backlink" href={departmentsHref}>{backLabel}</a
             >
             <p class="department-kicker">{shipTitle}</p>
             <h1>{departmentTitle}</h1>
